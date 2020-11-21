@@ -1,3 +1,4 @@
+/* eslint-disable */
 const { override, addBabelPlugin } = require('customize-cra');
 
 const rootImport = [

@@ -6,7 +6,7 @@ import storage from 'redux-persist/lib/storage';
 
 import reducers from './ducks';
 import sagas from './sagas';
-import { __DEV__ } from '../utils/dev';
+import { __DEV__ } from '~/utils/dev';
 
 // Persistor
 
