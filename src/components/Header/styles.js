@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import LinearProgress from '@material-ui/core/LinearProgress';
 
 export const Container = styled.header`
   height: 56px;
@@ -15,4 +16,13 @@ export const Content = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+`;
+
+export const Progress = styled(LinearProgress).attrs()`
+  width: 100%;
+  background-color: #272727 !important;
+
+  .MuiLinearProgress-barColorPrimary{
+    background-color: #494949 !important;
+  }
 `;

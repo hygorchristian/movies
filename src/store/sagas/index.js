@@ -1,7 +1,7 @@
 import { all } from 'redux-saga/effects';
 
+import favourites from './favourites';
+
 export default function* () {
-  return yield all([
-    // takeLatest(ProjectsTypes.GET_REQUEST, loadProjects)
-  ]);
+  return yield all([...favourites]);
 }

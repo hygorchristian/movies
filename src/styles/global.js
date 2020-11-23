@@ -6,12 +6,9 @@ export default createGlobalStyle`
     padding:0;
     box-sizing: border-box;
     outline: 0;
-    transition: color 500ms linear;
-    transition: background-color 500ms linear;
   }
 
   html, body, #root{
-    height: 100%;
     width: 100%;
     background-color: rgba(12,21,29,.8);
   }
@@ -20,7 +17,7 @@ export default createGlobalStyle`
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
     -moz-osx-font-smoothing: grayscale;
-    font-family: Nunito, sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     color: #ffffff;
     user-select: none;
   }
