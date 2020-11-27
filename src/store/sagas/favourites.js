@@ -5,9 +5,7 @@ import { showErrorMessage } from '~/components/Notifier/actions';
 
 function* loadMovies() {
   try {
-    console.tron.log('GETTINg...');
-    const response = yield call(Api.getFavoriteMovies);
-    console.tron.log(response);
+    const response = yield call(Api.getAllMovies);
     const { items } = response.data;
 
     yield put(FavoritesActions.loadMoviesSuccess(items));
@@ -16,7 +14,19 @@ function* loadMovies() {
     console.tron.errors(e);
   }
 }
+function* loadTVShows() {
+  try {
+    const response = yield call(Api.getAllShows);
+    const { items } = response.data;
+
+    yield put(FavoritesActions.loadShowsSuccess(items));
+  } catch (e) {
+    showErrorMessage('Error getting the movies');
+    console.tron.errors(e);
+  }
+}
 
 export default [
-  takeLatest(FavoritesTypes.LOAD_MOVIES_REQUEST, loadMovies)
+  takeLatest(FavoritesTypes.LOAD_MOVIES_REQUEST, loadMovies),
+  takeLatest(FavoritesTypes.LOAD_SHOWS_REQUEST, loadTVShows)
 ];

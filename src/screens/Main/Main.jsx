@@ -1,55 +1,40 @@
-import React, { useEffect, useState } from 'react';
-import FormControl from '@material-ui/core/FormControl';
-import InputLabel from '@material-ui/core/InputLabel';
-import Select from '@material-ui/core/Select';
-import MenuItem from '@material-ui/core/MenuItem';
+import React, { useEffect, useState, memo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import MovieItem from '~/components/MovieItem';
+import MenuItem from '@material-ui/core/MenuItem';
 import Header from '~/components/Header';
+import Movies from '~/screens/Movies';
+import Shows from '~/screens/Shows';
 
-import { Container, Content } from './styles';
+import { Container } from './styles';
 import { FavoritesActions } from '~/store/ducks/favourites';
 
+const pages = {
+  movies: <Movies />,
+  shows: <Shows />,
+};
+
 function Main() {
-  const { movies, loading } = useSelector((state) => state.favourites);
+  const [selected, setSelected] = useState('movies');
+
+  const { loading } = useSelector((state) => state.favourites);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(FavoritesActions.loadMoviesRequest());
+    dispatch(FavoritesActions.loadShowsRequest());
   }, []);
 
   return (
     <Container>
       <Header loading={loading} />
-      <Content>
-        <main>
-          <div className="filter">
-            <h2>Choose a category</h2>
-            <FormControl variant="filled">
-              <InputLabel id="demo-simple-select-label">Categories</InputLabel>
-              <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value={20}
-                onChange={() => null}
-              >
-                <MenuItem value={10}>Ten</MenuItem>
-                <MenuItem value={20}>Twenty</MenuItem>
-                <MenuItem value={30}>Thirty</MenuItem>
-              </Select>
-            </FormControl>
-          </div>
-          <div className="grid">
-            { movies.map((movie) => (
-              <MovieItem key={movie.id} movie={movie} />
-            )) }
-          </div>
-        </main>
-
-      </Content>
+      <div className="options">
+        <button onClick={() => setSelected('movies')} className={selected === 'movies' && 'selected'}>Movies</button>
+        <button onClick={() => setSelected('shows')} className={selected === 'shows' && 'selected'}>TV Shows</button>
+      </div>
+      { pages[selected] }
     </Container>
   );
 }
 
-export default Main;
+export default memo(Main);

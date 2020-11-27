@@ -5,53 +5,45 @@ export const Container = styled.div`
   flex-direction: column;
   width: 100%;
   padding-bottom: 100px;
-`;
 
-export const Content = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-
-  main {
-    width: 1000px;
+  .options{
     display: flex;
-    flex-direction: column;
-    padding-top: 60px;
+    width: 100%;
+    justify-content: center;
+    padding-top: 20px;
 
-    .filter{
-      width: 100%;
-      display: flex;
-      flex-direction: column;
+    button{
+      outline: none;
+      border: none;
+      height: 48px;
+      margin: 0 10px;
+      border-radius: 10px;
+      width: 250px;
+      background-color: #14323e;
+      font-size: 14px;
+      color: white;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 1.11px;
+      cursor: pointer;
 
-      h2{
-        margin-right: 40px;
-        margin-bottom: 20px;
-        font-size: 20px;
+      &:hover{
+        transform: scale(1.02);
+      background-color: #153b48;
       }
-    }
 
-    .grid{
-      width: 100%;
-      display: grid;
-      grid-row-gap: 30px;
-      grid-column-gap: 30px;
-      grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );;
-      padding-top: 60px;
-
-      .item{
-        width: 100%;
-        height: 350px;
-        background-color: white;
-        border-radius: 10px;
-        transition: all 150ms ease-in-out;
-        cursor: pointer;
-
-        &:hover{
-          transform: scale(1.05);
-        }
+      &:active{
+        transform: scale(0.99);
       }
+
+      &.selected{
+        background-color: #228a45;
+      }
+
+      &.selected:hover{
+        background-color: #219956;
+      }
+
     }
   }
-
 `;

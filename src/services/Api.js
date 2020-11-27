@@ -9,7 +9,9 @@ class Api {
 
   get = (url) => this.api.get(url, { params: { api_key: process.env.REACT_APP_DBMOVIE_API_KEY } })
 
-  getFavoriteMovies = () => this.get('/list/7065818');
+  getAllMovies = () => this.get('/list/7065818');
+
+  getAllShows = () => this.get('/list/7065862');
 
   getImage = (path) => `https://image.tmdb.org/t/p/w300/${path}`;
 }
