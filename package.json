@@ -32,7 +32,8 @@
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject",
-    "eslint:fix": "eslint . --fix --ext .ts,.tsx,.js,.jsx"
+    "eslint:fix": "eslint . --fix --ext .ts,.tsx,.js,.jsx",
+    "deploy": "yarn build && aws s3 sync build/ s3://movies.hygorchristian.com"
   },
   "eslintConfig": {
     "extends": [
