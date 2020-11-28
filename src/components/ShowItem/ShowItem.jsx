@@ -21,12 +21,12 @@ function ShowItem({ data }) {
 
   useEffect(() => {
     setWidth(ref.current?.offsetWidth);
-  }, [ref.current, windowWidth]);
+  }, [windowWidth]);
 
   return (
     <Container onClick={openDetail}>
       <div ref={ref} className="cover">
-        <img className="cover" src={Api.getImage(data.poster_path)} style={{ height: width * aspectRatio }} />
+        <img className="cover" src={Api.getImage(data.poster_path)} style={{ height: width * aspectRatio }} alt="cover" />
         <Rate size={40} value={data.vote_average * 10} />
       </div>
       <h3 className="title">{ data.original_name }</h3>

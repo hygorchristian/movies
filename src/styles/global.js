@@ -1,6 +1,11 @@
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
+  @font-face {
+    font-family: "MarkPro";
+    src: url("/fonts/mark-pro.otf") format("otf");
+  }
+
   *{
     margin: 0;
     padding:0;
@@ -18,7 +23,7 @@ export default createGlobalStyle`
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
     -moz-osx-font-smoothing: grayscale;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: MarkPro, sans-serif;
     color: #ffffff;
     user-select: none;
   }

@@ -36,8 +36,8 @@ function Main() {
     <Container>
       <Header loading={loading} />
       <div className="options">
-        <button onClick={() => setSelected('movies')} className={selected === 'movies' && 'selected'}>Movies</button>
-        <button onClick={() => setSelected('shows')} className={selected === 'shows' && 'selected'}>TV Shows</button>
+        <button onClick={() => setSelected('movies')} className={selected === 'movies' ? 'selected' : ''}>Movies</button>
+        <button onClick={() => setSelected('shows')} className={selected === 'shows' ? 'selected' : ''}>TV Shows</button>
       </div>
       { pages[selected] }
       <Drawer anchor="right" open={visible} onClose={closeDetail}>

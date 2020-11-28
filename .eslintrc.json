@@ -36,6 +36,8 @@
     "prefer-promise-reject-errors": "off",
     "import/extensions": "off",
     "react/jsx-no-target-blank": "off",
-    "react/button-has-type": "off"
+    "react/button-has-type": "off",
+    "react-hooks/exhaustive-deps": "off"
+
   }
 }

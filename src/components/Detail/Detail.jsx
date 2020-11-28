@@ -15,7 +15,7 @@ function Detail() {
   return (
     <Container>
       <div className="cover" style={{ backgroundImage: getBg(Api.getBackdropImage(current.backdrop_path)) }}>
-        <img src={Api.getImage(current.poster_path)} />
+        <img src={Api.getImage(current.poster_path)} alt="poster" />
         <div className="info">
           <div className="title-line">
             <h2>{title}</h2>
