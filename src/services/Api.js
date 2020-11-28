@@ -13,6 +13,8 @@ class Api {
 
   getAllShows = () => this.get('/list/7065862');
 
+  getAllGenres = () => this.get('/genre/movie/list');
+
   getImage = (path) => `https://image.tmdb.org/t/p/w300/${path}`;
 }
 

@@ -1,17 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 import { useSelector } from 'react-redux';
 
-import MovieItem from '~/components/MovieItem';
-
 import { Content } from './styles';
 import ShowItem from '~/components/ShowItem';
 
 function Shows() {
-  const { tvShows } = useSelector((state) => state.favourites);
+  const [selected, setSelected] = useState(0);
+  const [filtered, setFiltered] = useState([]);
+
+  const { tvShows, showGenres } = useSelector((state) => state.favourites);
+
+  useEffect(() => {
+    if (selected === 0) {
+      setFiltered(tvShows);
+    } else {
+      const _filtered = tvShows.filter((movie) => movie.genre_ids?.includes(selected));
+      setFiltered(_filtered);
+    }
+  }, [tvShows, selected]);
 
   return (
     <Content>
@@ -23,16 +33,18 @@ function Shows() {
             <Select
               labelId="demo-simple-select-label"
               id="demo-simple-select"
-              value={10}
-              onChange={() => null}
+              value={selected}
+              onChange={(e) => setSelected(e.target.value)}
             >
-              <MenuItem value="movies">Movies</MenuItem>
-              <MenuItem value="shows">TV Shows</MenuItem>
+              <MenuItem value={0}>All</MenuItem>
+              {showGenres.map((genre) => (
+                <MenuItem key={genre.id} value={genre.id}>{ genre.name }</MenuItem>
+              ))}
             </Select>
           </FormControl>
         </div>
         <div className="grid">
-          { tvShows.map((movie) => (
+          { filtered.map((movie) => (
             <ShowItem key={movie.id} movie={movie} />
           )) }
         </div>
