@@ -1,9 +1,26 @@
 import { createGlobalStyle } from 'styled-components';
+import MarkPro from '~/assets/fonts/mark-pro.otf';
+import MarkProBold from '~/assets/fonts/mark-pro-bold.otf';
+import MarkProHair from '~/assets/fonts/mark-pro-hairline.otf';
 
 export default createGlobalStyle`
   @font-face {
-    font-family: "MarkPro";
-    src: url("/fonts/mark-pro.otf") format("otf");
+    font-family: 'MarkPro';
+    url(${MarkPro}) format('otf'),
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'MarkPro';
+    url(${MarkProBold}) format('otf'),
+    font-weight: 700;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'MarkPro';
+    url(${MarkProHair}) format('otf'),
+    font-weight: 200;
+    font-style: normal;
   }
 
   *{
