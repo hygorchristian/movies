@@ -47,7 +47,7 @@ function Movies() {
         </div>
         <div className="grid">
           { filtered.map((movie) => (
-            <MovieItem key={movie.id} movie={movie} />
+            <MovieItem key={movie.id} data={movie} />
           )) }
         </div>
       </main>

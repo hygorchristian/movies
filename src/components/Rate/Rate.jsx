@@ -2,11 +2,11 @@ import React from 'react';
 
 import { Container, Progress } from './styles';
 
-function Rate({ value }) {
+function Rate({ value, size, ...props }) {
   return (
-    <Container>
+    <Container size={size} {...props}>
       <span className="value">{ value }</span>
-      <Progress value={value} />
+      <Progress value={value} size={size} />
     </Container>
 );
 }

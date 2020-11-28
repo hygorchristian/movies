@@ -45,7 +45,7 @@ function Shows() {
         </div>
         <div className="grid">
           { filtered.map((movie) => (
-            <ShowItem key={movie.id} movie={movie} />
+            <ShowItem key={movie.id} data={movie} />
           )) }
         </div>
       </main>
