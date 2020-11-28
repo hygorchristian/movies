@@ -39,7 +39,7 @@ function Movies() {
             >
               <MenuItem value={0}>All</MenuItem>
 
-              {movieGenres.map((genre) => (
+              {movieGenres?.map((genre) => (
                 <MenuItem key={genre.id} value={genre.id}>{ genre.name }</MenuItem>
               ))}
             </Select>
