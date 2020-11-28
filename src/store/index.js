@@ -13,7 +13,7 @@ import { __DEV__ } from '~/utils/dev';
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['favourites', 'detail'] // only navigation will be persisted
+  whitelist: ['favourites'] // only navigation will be persisted
 };
 
 const middlewares = [];

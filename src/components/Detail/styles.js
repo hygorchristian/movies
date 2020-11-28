@@ -20,7 +20,7 @@ export const Container = styled.div`
     background-size: cover;
 
     img{
-      height: 100%;
+      height: 500px;
       object-fit: cover;
       object-position: right;
       border-radius: 10px;
