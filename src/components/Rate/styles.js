@@ -2,11 +2,8 @@ import styled from 'styled-components';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
 export const Container = styled.div`
-  height: 40px;
-  width: 40px;
-  position: absolute;
-  bottom: -20px;
-  left: 5px;
+  height: ${({ size }) => size - 4}px;
+  width: ${({ size }) => size - 4}px;
   border-radius: 50%;
   background-color: rgb(3,37,65);
   display: flex;
@@ -24,6 +21,6 @@ export const Progress = styled(CircularProgress).attrs({
 })`
   position: absolute;
   color: #00c976 !important;
-  height: 36px !important;
-  width: 36px !important;
+  height: ${({ size }) => size - 4}px !important;
+  width: ${({ size }) => size - 4}px !important;
 `;

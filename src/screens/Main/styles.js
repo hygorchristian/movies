@@ -4,7 +4,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding-bottom: 100px;
+  padding: 0 20px 100px;
 
   .options{
     display: flex;

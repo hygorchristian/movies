@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import RateBase from '~/components/Rate';
 
 export const Container = styled.div`
   width: 100%;
@@ -27,4 +28,10 @@ export const Container = styled.div`
     margin-top: 26px;
     color: rgba(255,255,255,0.85);
   }
+`;
+
+export const Rate = styled(RateBase)`
+  position: absolute;
+  bottom: -20px;
+  left: 5px;
 `;
