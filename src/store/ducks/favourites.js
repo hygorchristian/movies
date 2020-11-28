@@ -15,7 +15,8 @@ const { Types, Creators } = createActions({
   addMovies: ['movies'],
   addShows: ['tvShows'],
   setMovieGenres: ['movieGenres'],
-  setShowGenres: ['showGenres']
+  setShowGenres: ['showGenres'],
+  setSelected: ['selected']
 }, { prefix: 'FAVOURITES/' });
 
 export const FavoritesTypes = Types;
@@ -29,7 +30,8 @@ export const INITIAL_STATE = Immutable({
   loading: false,
   error: null,
   movieGenres: [],
-  showGenres: []
+  showGenres: [],
+  selected: 'movies'
 });
 
 // Reducer Functions
@@ -62,6 +64,8 @@ const setMovieGenres = (state, { movieGenres }) => ({ ...state, movieGenres });
 
 const setShowGenres = (state, { showGenres }) => ({ ...state, showGenres });
 
+const setSelected = (state, { selected }) => ({ ...state, selected });
+
 // Reducer
 
 export const FavoritesReducer = createReducer(INITIAL_STATE, {
@@ -77,4 +81,5 @@ export const FavoritesReducer = createReducer(INITIAL_STATE, {
   [Types.ADD_SHOWS]: addShows,
   [Types.SET_MOVIE_GENRES]: setMovieGenres,
   [Types.SET_SHOW_GENRES]: setShowGenres,
+  [Types.SET_SELECTED]: setSelected,
 });

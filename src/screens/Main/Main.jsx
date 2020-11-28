@@ -17,14 +17,16 @@ const pages = {
 };
 
 function Main() {
-  const [selected, setSelected] = useState('movies');
-
-  const { loading } = useSelector((state) => state.favourites);
+  const { loading, selected } = useSelector((state) => state.favourites);
   const { visible } = useSelector((state) => state.detail);
   const dispatch = useDispatch();
 
   const closeDetail = () => {
     dispatch(DetailActions.setDetailVisible(false));
+  };
+
+  const setSelected = (value) => {
+    dispatch(FavoritesActions.setSelected(value));
   };
 
   useEffect(() => {
