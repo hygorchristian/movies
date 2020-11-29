@@ -16,6 +16,26 @@ export const Content = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+
+  nav{
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+    a{
+      margin-left: 20px;
+      color: rgba(255,255,255,0.73);
+      text-decoration: none;
+      text-transform: uppercase;
+
+      &.selected{
+        font-weight: 600;
+        color: #2ed460;
+      }
+    }
+
+  }
 `;
 
 export const Progress = styled(LinearProgress).attrs()`

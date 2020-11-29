@@ -8,6 +8,7 @@ import { useSelector } from 'react-redux';
 import MovieItem from '~/components/MovieItem';
 
 import { Content } from './styles';
+import Main from '~/screens/Main/Main';
 
 function Movies() {
   const [selected, setSelected] = useState(0);
@@ -25,33 +26,35 @@ function Movies() {
   }, [movies, selected]);
 
   return (
-    <Content>
-      <main>
-        <div className="filter">
-          <h2>Choose a category</h2>
-          <FormControl variant="filled">
-            <InputLabel id="demo-simple-select-label">Categories</InputLabel>
-            <Select
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
-              value={selected}
-              onChange={(e) => setSelected(e.target.value)}
-            >
-              <MenuItem value={0}>All</MenuItem>
+    <Main>
+      <Content>
+        <main>
+          <div className="filter">
+            <h2>Choose a category</h2>
+            <FormControl variant="filled">
+              <InputLabel id="demo-simple-select-label">Categories</InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={selected}
+                onChange={(e) => setSelected(e.target.value)}
+              >
+                <MenuItem value={0}>All</MenuItem>
 
-              {movieGenres?.map((genre) => (
-                <MenuItem key={genre.id} value={genre.id}>{ genre.name }</MenuItem>
-              ))}
-            </Select>
-          </FormControl>
-        </div>
-        <div className="grid">
-          { filtered.map((movie) => (
-            <MovieItem key={movie.id} data={movie} />
-          )) }
-        </div>
-      </main>
-    </Content>
+                {movieGenres?.map((genre) => (
+                  <MenuItem key={genre.id} value={genre.id}>{ genre.name }</MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+          </div>
+          <div className="grid">
+            { filtered.map((movie) => (
+              <MovieItem key={movie.id} data={movie} />
+            )) }
+          </div>
+        </main>
+      </Content>
+    </Main>
   );
 }
 

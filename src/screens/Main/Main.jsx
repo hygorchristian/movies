@@ -1,5 +1,6 @@
 import React, { useEffect, useState, memo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Switch, Route } from 'react-router-dom';
 
 import Drawer from '@material-ui/core/Drawer';
 import Header from '~/components/Header';
@@ -16,17 +17,13 @@ const pages = {
   shows: <Shows />,
 };
 
-function Main() {
-  const { loading, selected } = useSelector((state) => state.favourites);
+function Main({ children }) {
+  const { loading } = useSelector((state) => state.favourites);
   const { visible } = useSelector((state) => state.detail);
   const dispatch = useDispatch();
 
   const closeDetail = () => {
     dispatch(DetailActions.setDetailVisible(false));
-  };
-
-  const setSelected = (value) => {
-    dispatch(FavoritesActions.setSelected(value));
   };
 
   useEffect(() => {
@@ -37,11 +34,7 @@ function Main() {
   return (
     <Container>
       <Header loading={loading} />
-      <div className="options">
-        <button onClick={() => setSelected('movies')} className={selected === 'movies' ? 'selected' : ''}>Movies</button>
-        <button onClick={() => setSelected('shows')} className={selected === 'shows' ? 'selected' : ''}>TV Shows</button>
-      </div>
-      { pages[selected] }
+      { children }
       <Drawer anchor="right" open={visible} onClose={closeDetail}>
         <Detail />
       </Drawer>
