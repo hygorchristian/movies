@@ -11,9 +11,19 @@ const navItems = [
     path: '/movies'
   },
   {
+    name: 'fav-movies',
+    label: 'Fav Movies',
+    path: '/movies/favorites'
+  },
+  {
     name: 'shows',
     label: 'TV Shows',
     path: '/shows'
+  },
+  {
+    name: 'fav-shows',
+    label: 'Fav Shows',
+    path: '/shows/favorites'
   },
 ];
 
