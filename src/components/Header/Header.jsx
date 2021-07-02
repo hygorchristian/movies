@@ -38,7 +38,7 @@ function Header({ loading }) {
   return (
     <Container>
       <Content>
-        <h2>My favourite movies</h2>
+        <h2>My favorite movies</h2>
         <nav>
           {navItems.map((item) => (
             <a onClick={() => setSelected(item.name)} className={selected === item.name ? 'selected' : ''} href={item.path}>{ item.label }</a>

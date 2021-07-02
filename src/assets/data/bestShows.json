@@ -1,110 +1,108 @@
-{
-  "items": [
-    {
-      "vote_average": 8.7,
-      "popularity": 193.609,
-      "vote_count": 3632,
-      "origin_country": [
-        "US"
-      ],
-      "media_type": "tv",
-      "backdrop_path": "/eV3XnUul4UfIivz3kxgeIozeo50.jpg",
-      "first_air_date": "2013-12-02",
-      "genre_ids": [
-        16,
-        35,
-        10765,
-        10759
-      ],
-      "original_name": "Rick and Morty",
-      "original_language": "en",
-      "poster_path": "/8kOWDBK6XlPUzckuHDo3wwVRFwt.jpg",
-      "id": 60625,
-      "overview": "Rick is a mentally-unbalanced but scientifically-gifted old man who has recently reconnected with his family. He spends most of his time involving his young grandson Morty in dangerous, outlandish adventures throughout space and alternate universes. Compounded with Morty's already unstable family life, these events cause Morty much distress at home and school.",
-      "name": "Rick and Morty"
-    },
-    {
-      "vote_average": 8.6,
-      "popularity": 184.639,
-      "name": "Breaking Bad",
-      "origin_country": [
-        "US"
-      ],
-      "media_type": "tv",
-      "backdrop_path": "/tsRy63Mu5cu8etL1X7ZLyf7UP1M.jpg",
-      "first_air_date": "2008-01-20",
-      "genre_ids": [
-        18
-      ],
-      "original_name": "Breaking Bad",
-      "original_language": "en",
-      "overview": "When Walter White, a New Mexico chemistry teacher, is diagnosed with Stage III cancer and given a prognosis of only two years left to live. He becomes filled with a sense of fearlessness and an unrelenting desire to secure his family's financial future at any cost as he enters the dangerous world of drugs and crime.",
-      "poster_path": "/ggFHVNu6YYI5L9pCfOacjizRGt.jpg",
-      "id": 1396,
-      "vote_count": 6039
-    },
-    {
-      "vote_average": 8.3,
-      "popularity": 303.403,
-      "original_name": "Game of Thrones",
-      "origin_country": [
-        "US"
-      ],
-      "media_type": "tv",
-      "backdrop_path": "/suopoADq0k8YZr4dQXcU6pToj6s.jpg",
-      "first_air_date": "2011-04-17",
-      "genre_ids": [
-        10765,
-        18,
-        10759,
-        9648
-      ],
-      "overview": "Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north. Amidst the war, a neglected military order of misfits, the Night's Watch, is all that stands between the realms of men and icy horrors beyond.",
-      "original_language": "en",
-      "name": "Game of Thrones",
-      "id": 1399,
-      "poster_path": "/u3bZgnGQ9T01sWNhyveQz0wH0Hl.jpg",
-      "vote_count": 11655
-    },
-    {
-      "vote_average": 8.1,
-      "popularity": 34.658,
-      "vote_count": 870,
-      "origin_country": [
-        "US"
-      ],
-      "media_type": "tv",
-      "backdrop_path": "/4pfXAnWxOfEJsUgDPW0zqzs5UWv.jpg",
-      "first_air_date": "2014-04-06",
-      "genre_ids": [
-        35
-      ],
-      "overview": "In the high-tech gold rush of modern Silicon Valley, the people most qualified to succeed are the least capable of handling success. Partially inspired by Mike Judge’s own experiences as a Silicon Valley engineer in the late ‘80s, Silicon Valley is an American sitcom that centers around six programmers who are living together and trying to make it big in the Silicon Valley.",
-      "original_language": "en",
-      "original_name": "Silicon Valley",
-      "poster_path": "/a154rIMzbTyefodNp4NY8qjOEfC.jpg",
-      "name": "Silicon Valley",
-      "id": 60573
-    },
-    {
-      "vote_average": 8.5,
-      "popularity": 81.632,
-      "vote_count": 2458,
-      "origin_country": [
-        "US"
-      ],
-      "media_type": "tv",
-      "backdrop_path": "/uL6Ad12W09L1sfuOE2pcTeak7bt.jpg",
-      "first_air_date": "2019-05-06",
-      "genre_ids": [
-        18
-      ],
-      "overview": "The true story of one of the worst man-made catastrophes in history: the catastrophic nuclear accident at Chernobyl. A tale of the brave men and women who sacrificed to save Europe from unimaginable disaster.",
-      "original_language": "en",
-      "original_name": "Chernobyl",
-      "poster_path": "/hlLXt2tOPT6RRnjiUmoxyG1LTFi.jpg",
-      "name": "Chernobyl",
-      "id": 87108
-    }
-  ]
-}
+[
+  {
+    "vote_average": 8.7,
+    "popularity": 193.609,
+    "vote_count": 3632,
+    "origin_country": [
+      "US"
+    ],
+    "media_type": "tv",
+    "backdrop_path": "/eV3XnUul4UfIivz3kxgeIozeo50.jpg",
+    "first_air_date": "2013-12-02",
+    "genre_ids": [
+      16,
+      35,
+      10765,
+      10759
+    ],
+    "original_name": "Rick and Morty",
+    "original_language": "en",
+    "poster_path": "/8kOWDBK6XlPUzckuHDo3wwVRFwt.jpg",
+    "id": 60625,
+    "overview": "Rick is a mentally-unbalanced but scientifically-gifted old man who has recently reconnected with his family. He spends most of his time involving his young grandson Morty in dangerous, outlandish adventures throughout space and alternate universes. Compounded with Morty's already unstable family life, these events cause Morty much distress at home and school.",
+    "name": "Rick and Morty"
+  },
+  {
+    "vote_average": 8.6,
+    "popularity": 184.639,
+    "name": "Breaking Bad",
+    "origin_country": [
+      "US"
+    ],
+    "media_type": "tv",
+    "backdrop_path": "/tsRy63Mu5cu8etL1X7ZLyf7UP1M.jpg",
+    "first_air_date": "2008-01-20",
+    "genre_ids": [
+      18
+    ],
+    "original_name": "Breaking Bad",
+    "original_language": "en",
+    "overview": "When Walter White, a New Mexico chemistry teacher, is diagnosed with Stage III cancer and given a prognosis of only two years left to live. He becomes filled with a sense of fearlessness and an unrelenting desire to secure his family's financial future at any cost as he enters the dangerous world of drugs and crime.",
+    "poster_path": "/ggFHVNu6YYI5L9pCfOacjizRGt.jpg",
+    "id": 1396,
+    "vote_count": 6039
+  },
+  {
+    "vote_average": 8.3,
+    "popularity": 303.403,
+    "original_name": "Game of Thrones",
+    "origin_country": [
+      "US"
+    ],
+    "media_type": "tv",
+    "backdrop_path": "/suopoADq0k8YZr4dQXcU6pToj6s.jpg",
+    "first_air_date": "2011-04-17",
+    "genre_ids": [
+      10765,
+      18,
+      10759,
+      9648
+    ],
+    "overview": "Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north. Amidst the war, a neglected military order of misfits, the Night's Watch, is all that stands between the realms of men and icy horrors beyond.",
+    "original_language": "en",
+    "name": "Game of Thrones",
+    "id": 1399,
+    "poster_path": "/u3bZgnGQ9T01sWNhyveQz0wH0Hl.jpg",
+    "vote_count": 11655
+  },
+  {
+    "vote_average": 8.1,
+    "popularity": 34.658,
+    "vote_count": 870,
+    "origin_country": [
+      "US"
+    ],
+    "media_type": "tv",
+    "backdrop_path": "/4pfXAnWxOfEJsUgDPW0zqzs5UWv.jpg",
+    "first_air_date": "2014-04-06",
+    "genre_ids": [
+      35
+    ],
+    "overview": "In the high-tech gold rush of modern Silicon Valley, the people most qualified to succeed are the least capable of handling success. Partially inspired by Mike Judge’s own experiences as a Silicon Valley engineer in the late ‘80s, Silicon Valley is an American sitcom that centers around six programmers who are living together and trying to make it big in the Silicon Valley.",
+    "original_language": "en",
+    "original_name": "Silicon Valley",
+    "poster_path": "/a154rIMzbTyefodNp4NY8qjOEfC.jpg",
+    "name": "Silicon Valley",
+    "id": 60573
+  },
+  {
+    "vote_average": 8.5,
+    "popularity": 81.632,
+    "vote_count": 2458,
+    "origin_country": [
+      "US"
+    ],
+    "media_type": "tv",
+    "backdrop_path": "/uL6Ad12W09L1sfuOE2pcTeak7bt.jpg",
+    "first_air_date": "2019-05-06",
+    "genre_ids": [
+      18
+    ],
+    "overview": "The true story of one of the worst man-made catastrophes in history: the catastrophic nuclear accident at Chernobyl. A tale of the brave men and women who sacrificed to save Europe from unimaginable disaster.",
+    "original_language": "en",
+    "original_name": "Chernobyl",
+    "poster_path": "/hlLXt2tOPT6RRnjiUmoxyG1LTFi.jpg",
+    "name": "Chernobyl",
+    "id": 87108
+  }
+]
