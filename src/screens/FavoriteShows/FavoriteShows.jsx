@@ -1,24 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import FormControl from '@material-ui/core/FormControl';
-import InputLabel from '@material-ui/core/InputLabel';
-import Select from '@material-ui/core/Select';
-import MenuItem from '@material-ui/core/MenuItem';
-import { useSelector } from 'react-redux';
-
+import React from 'react';
+import { useQuery } from 'react-query';
 import MovieItem from '~/components/MovieItem';
-
-import { Content } from './styles';
 import Main from '~/screens/Main/Main';
+import Api from '~/services/Api';
+import { Content } from './styles';
 
-import favShows from '~/assets/data/bestShows.json';
-
-function Movies() {
+function FavoriteShows() {
+  const { data } = useQuery('fav-shows', Api.getFavShows);
   return (
     <Main>
       <Content>
         <main>
           <div className="grid">
-            { favShows.map((movie) => (
+            { data?.map((movie) => (
               <MovieItem key={movie.id} data={movie} />
             )) }
           </div>
@@ -28,4 +22,4 @@ function Movies() {
   );
 }
 
-export default Movies;
+export default FavoriteShows;

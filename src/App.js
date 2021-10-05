@@ -1,17 +1,19 @@
-import './config/ReactotronConfig';
-
-import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import { SnackbarProvider } from 'notistack';
-import { PersistGate } from 'redux-persist/integration/react';
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
-
-import { store, persistor } from './store';
-import Routes from './routes';
-import Global from './styles/global';
+import { SnackbarProvider } from 'notistack';
+import React from 'react';
+import {
+  QueryClient,
+  QueryClientProvider
+} from 'react-query';
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
+import { PersistGate } from 'redux-persist/integration/react';
 import Notifier from '~/components/Notifier';
+import './config/ReactotronConfig';
+import Routes from './routes';
+import { persistor, store } from './store';
+import Global from './styles/global';
 
 const snackbarProviderOptions = {
   vertical: 'top',
@@ -24,6 +26,8 @@ const darkTheme = createMuiTheme({
   },
 });
 
+const queryClient = new QueryClient();
+
 function App() {
   return (
     <Provider store={store}>
@@ -32,8 +36,10 @@ function App() {
           <Global />
           <SnackbarProvider maxSnack={4} anchorOrigin={snackbarProviderOptions}>
             <BrowserRouter>
-              <Notifier />
-              <Routes />
+              <QueryClientProvider client={queryClient}>
+                <Notifier />
+                <Routes />
+              </QueryClientProvider>
             </BrowserRouter>
           </SnackbarProvider>
         </ThemeProvider>
